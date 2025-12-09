@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>بيتكوين كاش - الاستثمار</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="app-header">
+    <div class="brand">بيتكوين كاش</div>
+  </header>
+
+  <main class="container">
+    <!-- شاشة الاستثمار -->
+    <section id="screen-invest" class="screen active">
+      <h1 class="page-title">الاستثمار</h1>
+
+      <div class="card">
+        <h2 class="card-title">المبالغ الجاهزة</h2>
+
+        <div class="quick-plans">
+          <button class="chip plan-btn" data-amount="10">10$</button>
+          <button class="chip plan-btn" data-amount="50">50$</button>
+          <button class="chip plan-btn" data-amount="100">100$</button>
+          <button class="chip plan-btn" data-amount="200">200$</button>
+          <button class="chip plan-btn" data-amount="500">500$</button>
+        </div>
+
+        <label class="field">
+          <span>أدخل مبلغ الاستثمار</span>
+          <input id="amountInput" type="number" min="10" placeholder="مثال: 50" />
+        </label>
+
+        <label class="field">
+          <span>مدة الاستثمار</span>
+          <select id="durationSelect">
+            <option value="20">20 يوم — ربح 80%</option>
+            <option value="30">30 يوم — ربح 90%</option>
+            <option value="60">60 يوم — ربح 120%</option>
+            <option value="90">90 يوم — ربح 150%</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>اسم المستخدم</span>
+          <input id="usernameInput" type="text" placeholder="اكتب اسمك هنا" />
+        </label>
+
+        <div class="summary-box">
+          <div class="row">
+            <span>الربح المتوقع:</span>
+            <span id="expectedProfit">0$</span>
+          </div>
+
+          <div class="row">
+            <span>المبلغ النهائي:</span>
+            <span id="totalReturn">0$</span>
+          </div>
+        </div>
+
+        <button id="startInvestBtn" class="btn primary full">ابدأ الاستثمار</button>
+      </div>
+    </section>
+
+    <!-- شاشة المحفظة -->
+    <section id="screen-wallet" class="screen">
+      <h1 class="page-title">المحفظة</h1>
+
+      <div class="card">
+        <div class="row">
+          <span>رصيدك المتاح:</span>
+          <span id="walletBalance">0$</span>
+        </div>
+
+        <div class="row">
+          <span>قيد الاستثمار:</span>
+          <span id="lockedBalance">0$</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">طلب سحب</h2>
+
+        <label class="field">
+          <span>المبلغ المطلوب سحبه</span>
+          <input id="withdrawAmount" type="number" min="1" />
+        </label>
+
+        <label class="field">
+          <span>عنوان محفظتك</span>
+          <input id="withdrawWallet" type="text" placeholder="USDT TRC20" />
+        </label>
+
+        <button id="withdrawBtn" class="btn primary full">إرسال طلب السحب</button>
+      </div>
+    </section>
+
+    <!-- شاشة الملف الشخصي -->
+    <section id="screen-profile" class="screen">
+      <h1 class="page-title">الملف الشخصي</h1>
+
+      <div class="card">
+        <label class="field">
+          <span>اسم المستخدم</span>
+          <input id="profileUsername" type="text" />
+        </label>
+
+        <label class="field">
+          <span>البريد الإلكتروني (اختياري)</span>
+          <input id="profileEmail" type="email" />
+        </label>
+
+        <button id="saveProfileBtn" class="btn primary full">حفظ</button>
+      </div>
+    </section>
+
+    <!-- شاشة من نحن -->
+    <section id="screen-about" class="screen">
+      <h1 class="page-title">من نحن</h1>
+
+      <div class="card">
+        <p>
+          منصة <strong>بيتكوين كاش</strong> للاستثمار عبر USDT (TRC20) بربح يتراوح بين
+          80% و150% حسب مدة الاستثمار.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- شريط التنقل السفلي -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-target="screen-invest">💼<span>الاستثمار</span></button>
+    <button class="nav-item" data-target="screen-wallet">👛<span>المحفظة</span></button>
+    <button class="nav-item" data-target="screen-profile">🧑‍💼<span>الملف</span></button>
+    <button class="nav-item" data-target="screen-about">ℹ️<span>من نحن</span></button>
+  </nav>
+
+  <script src="app.js"></script>
+</body>
+</html>
