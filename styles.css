@@ -1,0 +1,190 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+
+html {
+  font-family: 'Tajawal', system-ui, sans-serif;
+}
+
+body {
+  background: #05060a;
+  color: #e5e7eb;
+}
+
+/* ألوان الموقع */
+:root {
+  --gold: #d4af37;
+  --silver: #c0c0c0;
+  --card: #11131a;
+  --border: #20242f;
+  --muted: #9ca3af;
+}
+
+/* رأس الموقع */
+.app-header {
+  padding: 14px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, #11131b, #05060a);
+}
+
+.brand {
+  font-weight: 900;
+  font-size: 22px;
+  background: linear-gradient(90deg, var(--gold), var(--silver));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* الحاوية */
+.container {
+  padding: 16px;
+}
+
+/* البطاقات */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* الحقول */
+.field {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.field input,
+.field select {
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #2e3240;
+  background: #090b10;
+  color: #e5e7eb;
+}
+
+/* الأزرار */
+.btn {
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0;
+  background: #2c3344;
+  color: white;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, var(--gold), var(--silver));
+  color: #1a1300;
+}
+
+.btn.full {
+  width: 100%;
+}
+
+/* ملخص */
+.summary-box {
+  padding: 10px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 0;
+}
+
+/* مخططات الاستثمار */
+.quick-plans {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #2e3342;
+  background: #090b10;
+  cursor: pointer;
+}
+
+.chip.active {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+/* الشاشات */
+.screen { display: none; }
+.screen.active { display: block; }
+
+/* شريط التنقل السفلي */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #090b10;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-around;
+  padding: 6px;
+}
+
+.nav-item {
+  background: none;
+  border: none;
+  color: var(--muted);
+  text-align: center;
+  font-size: 11px;
+}
+
+.nav-item.active {
+  color: var(--gold);
+}
+
+/* لوحة المدير */
+.admin-body {
+  background: #020308;
+}
+
+.admin-list {
+  max-height: 260px;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.admin-item {
+  padding: 6px 0;
+  border-bottom: 1px solid #1c2030;
+}
+
+.admin-actions {
+  margin-top: 6px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.kbd {
+  padding: 3px 6px;
+  border-radius: 6px;
+  background: #05070e;
+  border: 1px solid #273043;
+  font-size: 12px;
+}
