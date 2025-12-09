@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>لوحة تحكم المدير - بيتكوين كاش</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="admin-body">
+  <header class="app-header">
+    <div class="brand">لوحة تحكم المدير</div>
+  </header>
+
+  <main class="container">
+
+    <!-- قسم تسجيل الدخول -->
+    <section id="loginSection" class="card">
+      <h1 class="page-title">تسجيل دخول المدير</h1>
+
+      <label class="field">
+        <span>كلمة المرور</span>
+        <input id="adminPassword" type="password" placeholder="أدخل كلمة مرور المدير" />
+      </label>
+
+      <button id="adminLoginBtn" class="btn primary full">
+        دخول
+      </button>
+
+      <p class="tiny muted">كلمة المرور الحالية: <b>Alihlal166.</b></p>
+
+      <p id="adminLoginStatus" class="tiny muted"></p>
+    </section>
+
+    <!-- لوحة التحكم بعد تسجيل الدخول -->
+    <section id="adminPanel" class="hidden">
+
+      <div class="card">
+        <h2 class="card-title">معلومات عامة</h2>
+        <p class="tiny">
+          عنوان محفظة الإيداع:
+          <span class="kbd">TPNoGerv1EMBSdrs9Yca93eCQUVsoNiRvq</span>
+        </p>
+        <button id="refreshDataBtn" class="btn ghost">تحديث البيانات</button>
+      </div>
+
+      <!-- طلبات الإيداع -->
+      <div class="card">
+        <h2 class="card-title">طلبات الإيداع</h2>
+        <div id="adminDeposits" class="tiny admin-list"></div>
+      </div>
+
+      <!-- طلبات السحب -->
+      <div class="card">
+        <h2 class="card-title">طلبات السحب</h2>
+        <div id="adminWithdrawals" class="tiny admin-list"></div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
